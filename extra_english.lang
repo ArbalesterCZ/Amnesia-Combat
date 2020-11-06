@@ -1,0 +1,38 @@
+<LANGUAGE>
+	<CATEGORY Name="CustomStoryMain">
+		<Entry Name="Description">Combat system.</Entry>
+	</CATEGORY>
+		
+	<CATEGORY Name="Loading">
+		<Entry Name="Test">Combat system.</Entry>
+	</CATEGORY>
+
+	<CATEGORY Name="Inventory">	
+		<Entry Name="ItemName_***NAME***">Head</Entry>
+		<Entry Name="ItemDesc_***NAME***">Descrtiption.</Entry>	
+	</CATEGORY>
+		
+	<CATEGORY Name="Journal">
+	//-------------------Journal-------------------//
+		<Entry Name="Note_***NAME***_Name">Head</Entry>
+		<Entry Name="Note_***NAME***_Text">Text...</Entry>	
+	//-------------------Quest-------------------//
+		<Entry Name="Quest_***NAME***_Text">Text of the quest.</Entry>
+	</CATEGORY>	
+		
+	<CATEGORY Name="Hints">
+		<Entry Name="Hint_1">The hint.</Entry>
+	</CATEGORY>
+	
+	<CATEGORY Name="Die">
+		<Entry Name="Die_1">Text when you die.</Entry>
+	</CATEGORY>
+
+	<CATEGORY Name="Sign">
+		<Entry Name="Sing_1">Show when you sign here.</Entry>
+	</CATEGORY>
+	
+	<CATEGORY Name="Levels">
+		<Entry Name="Map_1">Name of the map</Entry>
+	</CATEGORY>	
+</LANGUAGE>

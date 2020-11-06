@@ -1,0 +1,134 @@
+<Level>
+    <EditorSession>
+        <Performance CamClipPlanes="0.05 1000" LightsActive="true" PSActive="true" ShowFog="true" ShowSkybox="true" WorldReflection="true" />
+        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="true" GridSnap="true" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
+            <Viewport CameraPosition="-12.25 6.25005 167.75" CameraTarget="-12.25 6.25005 -12.25" CameraZoom="0" GridHeight="-12.25" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="167.75 6.25005 -12.25" CameraTarget="-12.25 6.25005 -12.25" CameraZoom="0" GridHeight="-12.25" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="0.249978 180 -12.25" CameraTarget="0.249978 0 -12.25" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="-2.44595 7.09719 10.758" CameraTarget="0.54053 -9.53674e-07 -0.548571" CameraZoom="1.29613" GridHeight="0" GridPlane="1" Preset="3" RenderMode="1" ShowAxes="false" ShowGrid="false" UsingLTCam="true" />
+        </ViewportConfig>
+        <Groups>
+            <Group ID="0" Name="None" Visible="true" />
+        </Groups>
+    </EditorSession>
+    <MapData FogActive="false" FogColor="1 1 1 1" FogCulling="true" FogEnd="20" FogFalloffExp="1" FogStart="0" GlobalDecalMaxTris="300" Name="" SkyBoxActive="false" SkyBoxColor="1 1 1 1" SkyBoxTexture="../../../../../../../">
+        <MapContents>
+            <FileIndex_StaticObjects NumOfFiles="0" />
+            <FileIndex_Entities NumOfFiles="4">
+                <File Id="0" Path="entities/ptest/enemy_suitor/enemy_suitor.ent" />
+                <File Id="1" Path="entities/enemy/servant_grunt/servant_grunt.ent" />
+                <File Id="2" Path="entities/enemy/servant_brute/servant_brute.ent" />
+                <File Id="3" Path="entities/equipment/sledge/sledge.ent" />
+            </FileIndex_Entities>
+            <FileIndex_Decals NumOfFiles="0" />
+            <StaticObjects />
+            <Primitives>
+                <Plane Active="true" AlignToWorldCoords="false" CastShadows="false" Collides="true" Corner1UV="0 12.5" Corner2UV="0 0" Corner3UV="12.5 0" Corner4UV="12.5 12.5" EndCorner="25 0 25" Group="0" ID="0" Material="/home/milan/.steam/steam/steamapps/common/Amnesia The Dark Descent/static_objects/mansionbase/floor/mansionbase_floor.mat" Name="floor" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="0.5 1 0.5" TileOffset="0 0 0" WorldPos="-12.25 0 -12.25" />
+                <Plane Active="true" AlignToWorldCoords="false" CastShadows="false" Collides="true" Corner1UV="12.5 -4.52499e-05" Corner2UV="0 0" Corner3UV="-2.26249e-05 -6.25" Corner4UV="12.5 -6.25005" EndCorner="12.5 0 25" Group="0" ID="87" Material="/home/milan/.steam/steam/steamapps/common/Amnesia The Dark Descent/static_objects/mansionbase/floor/mansionbase_floor_boards.mat" Name="wall_east" Rotation="0 0 1.5708" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="1.5708" TileAmount="0.5 1 0.5" TileOffset="0 0 0" WorldPos="12.75 0 -12.25" />
+                <Plane Active="true" AlignToWorldCoords="false" CastShadows="false" Collides="true" Corner1UV="12.5 -4.52499e-05" Corner2UV="0 0" Corner3UV="-2.26249e-05 -6.25" Corner4UV="12.5 -6.25005" EndCorner="12.5 0 25" Group="0" ID="88" Material="/home/milan/.steam/steam/steamapps/common/Amnesia The Dark Descent/static_objects/mansionbase/floor/mansionbase_floor_boards.mat" Name="wall_south" Rotation="-1.5708 0 1.5708" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="1.5708" TileAmount="0.5 1 0.5" TileOffset="0 0 0" WorldPos="12.75 0 12.75" />
+                <Plane Active="true" AlignToWorldCoords="false" CastShadows="false" Collides="true" Corner1UV="12.5 -4.52499e-05" Corner2UV="0 0" Corner3UV="-2.26249e-05 -6.25" Corner4UV="12.5 -6.25005" EndCorner="12.5 0 25" Group="0" ID="89" Material="/home/milan/.steam/steam/steamapps/common/Amnesia The Dark Descent/static_objects/mansionbase/floor/mansionbase_floor_boards.mat" Name="wall_west" Rotation="3.14159 0 1.5708" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="1.5708" TileAmount="0.5 1 0.5" TileOffset="0 0 0" WorldPos="-12.25 0 12.75" />
+                <Plane Active="true" AlignToWorldCoords="false" CastShadows="false" Collides="true" Corner1UV="12.5 -4.52499e-05" Corner2UV="0 0" Corner3UV="-2.26249e-05 -6.25" Corner4UV="12.5 -6.25005" EndCorner="12.5 0 25" Group="0" ID="90" Material="/home/milan/.steam/steam/steamapps/common/Amnesia The Dark Descent/static_objects/mansionbase/floor/mansionbase_floor_boards.mat" Name="wall_north" Rotation="1.5708 0 1.5708" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="1.5708" TileAmount="0.5 1 0.5" TileOffset="0 0 0" WorldPos="-12.25 0 -12.25" />
+            </Primitives>
+            <Decals />
+            <Entities>
+                <Area Active="true" AreaType="PlayerStart" Group="0" ID="85" Mesh="" Name="StartArea" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="0 0.5 0">
+                    <UserVariables />
+                </Area>
+                <BoxLight Active="true" BlendFunc="0" CastShadows="false" DiffuseColor="0.2 0.2 0.2 1" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0 0 0 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" Group="0" ID="86" Name="light_room" Radius="1" Rotation="0 0 0" Scale="30 30 30" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Size="30 30 30" Tag="" WorldPos="0 0 0" />
+                <Entity Active="true" FileIndex="1" Group="0" ID="97" Name="enemy_1" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-2.25 0 -3">
+                    <UserVariables>
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="DisableTriggers" Value="true" />
+                        <Var Name="Hallucination" Value="false" />
+                        <Var Name="HallucinationEndDist" Value="3" />
+                    </UserVariables>
+                </Entity>
+                <Entity Active="true" FileIndex="1" Group="0" ID="98" Name="enemy_3" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="2.5 0 -6.25">
+                    <UserVariables>
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="DisableTriggers" Value="true" />
+                        <Var Name="Hallucination" Value="false" />
+                        <Var Name="HallucinationEndDist" Value="3" />
+                    </UserVariables>
+                </Entity>
+                <Entity Active="true" FileIndex="1" Group="0" ID="99" Name="enemy_2" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="2.25 0 -2.75">
+                    <UserVariables>
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="DisableTriggers" Value="true" />
+                        <Var Name="Hallucination" Value="false" />
+                        <Var Name="HallucinationEndDist" Value="3" />
+                    </UserVariables>
+                </Entity>
+                <Entity Active="true" FileIndex="2" Group="0" ID="100" Name="enemy_4" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-6 0 -0.25">
+                    <UserVariables>
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="DisableTriggers" Value="true" />
+                        <Var Name="Hallucination" Value="false" />
+                        <Var Name="HallucinationEndDist" Value="3" />
+                    </UserVariables>
+                </Entity>
+                <Entity Active="true" FileIndex="2" Group="0" ID="101" Name="enemy_6" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="7.5 0 0.5">
+                    <UserVariables>
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="DisableTriggers" Value="true" />
+                        <Var Name="Hallucination" Value="false" />
+                        <Var Name="HallucinationEndDist" Value="3" />
+                    </UserVariables>
+                </Entity>
+                <Entity Active="true" FileIndex="2" Group="0" ID="102" Name="enemy_5" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="2.5 0 3.75">
+                    <UserVariables>
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="DisableTriggers" Value="true" />
+                        <Var Name="Hallucination" Value="false" />
+                        <Var Name="HallucinationEndDist" Value="3" />
+                    </UserVariables>
+                </Entity>
+                <Entity Active="true" FileIndex="0" Group="0" ID="103" Name="enemy_7" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-5.75 0 -4.5">
+                    <UserVariables>
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="DisableTriggers" Value="true" />
+                        <Var Name="Hallucination" Value="false" />
+                        <Var Name="HallucinationEndDist" Value="3" />
+                    </UserVariables>
+                </Entity>
+                <Entity Active="true" FileIndex="0" Group="0" ID="104" Name="enemy_9" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="7 0 -4">
+                    <UserVariables>
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="DisableTriggers" Value="true" />
+                        <Var Name="Hallucination" Value="false" />
+                        <Var Name="HallucinationEndDist" Value="3" />
+                    </UserVariables>
+                </Entity>
+                <Entity Active="true" FileIndex="0" Group="0" ID="105" Name="enemy_8" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-2.5 0 -8.75">
+                    <UserVariables>
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="DisableTriggers" Value="true" />
+                        <Var Name="Hallucination" Value="false" />
+                        <Var Name="HallucinationEndDist" Value="3" />
+                    </UserVariables>
+                </Entity>
+                <Entity Active="true" FileIndex="3" Group="0" ID="106" Name="big_hammer" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="0 0 1.25">
+                    <UserVariables>
+                        <Var Name="CastShadows" Value="true" />
+                        <Var Name="StaticPhysics" Value="false" />
+                        <Var Name="IsAffectedByDecal" Value="false" />
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="ConnectedProps" Value="" />
+                        <Var Name="ConnectionStateChangeCallback" Value="" />
+                        <Var Name="FullGameSave" Value="false" />
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="false" />
+                        <Var Name="PlayerInteractCallback" Value="" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="ContainedItem" Value="None" />
+                        <Var Name="DisableBreakable" Value="false" />
+                        <Var Name="IsInsanityVision" Value="false" />
+                        <Var Name="VisionMaxSanity" Value="30" />
+                    </UserVariables>
+                </Entity>
+            </Entities>
+            <Misc />
+            <StaticObjectCombos />
+        </MapContents>
+    </MapData>
+</Level>
