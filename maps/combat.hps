@@ -1,29 +1,20 @@
-float xOld;
-float yOld;
-float zOld;
-
-float x;
-float y;
-float z;
+float[] x(10); float[] y(10); float[] z(10); int last;
 
 void OnStart()
 {
-	for(int i=1;i<=9;i++) AddEntityCollideCallback("big_hammer", "enemy_"+i, "UseHammerOnEnemy", false, 1);
-
-	AddTimer("big_hammer", 0.0f, "TimerHammerPosition");
+	for(int i=0;i<10;i++) AddEntityCollideCallback("big_hammer", "enemy_"+i, "UseHammerOnEnemy", false, 1);
+	AddTimer("big_hammer", 0.00f, "TimerHammerPosition");
 }
 
 void TimerHammerPosition(string &in asTimer)
 {
-	xOld = x;
-	yOld = y;
-	zOld = z;
+	x[last] = GetEntityPosX(asTimer);
+	y[last] = GetEntityPosY(asTimer);
+	z[last] = GetEntityPosZ(asTimer);
+
+	last = (last + 1) % 10;
 	
-	x = GetEntityPosX(asTimer);
-	y = GetEntityPosY(asTimer);
-	z = GetEntityPosZ(asTimer);
-	
-	AddTimer(asTimer, 0.1f, "TimerHammerPosition");
+	AddTimer(asTimer, 0.01f, "TimerHammerPosition");
 }
 
 float Distance(string &in asEntity, float x, float y, float z)
@@ -31,22 +22,15 @@ float Distance(string &in asEntity, float x, float y, float z)
 	return MathSqrt(MathPow(GetEntityPosX(asEntity) - x, 2) + MathPow(GetEntityPosY(asEntity) - y, 2) + MathPow(GetEntityPosZ(asEntity) - z, 2));
 }
 
-bool IsStrength(string &in weapon, float timerLeft)
-{
-	if(timerLeft == 0.1f) return Distance(weapon, xOld, yOld, zOld) >= 1.0f;
-	else return Distance(weapon, x, y, z) >= MathMax(1.0f - timerLeft * 10, 0.25f);
-}
-
 void UseHammerOnEnemy(string &in weapon, string &in enemy, int alState)
 {	
-	float timerLeft = GetTimerTimeLeft(weapon);
 	RemoveTimer(weapon);
 
-	if(IsStrength(weapon, timerLeft))
+	if(Distance(weapon, x[last], y[last], z[last]) > 1.0f)
 	{
 		PlaySoundAtEntity("", "MetalMediumBashFlesh.snt", weapon, 0, false);	
 		CreateParticleSystemAtEntity("BloodyHit", "blood.ps", weapon, false);
 		FadeEnemyToSmoke(enemy, false);
 	}
-	AddTimer(weapon, 0.1f - timerLeft, "TimerHammerPosition");
+	AddTimer(weapon, 0.01f, "TimerHammerPosition");
 }
