@@ -24,13 +24,10 @@ float Distance(string &in asEntity, float x, float y, float z)
 
 void UseHammerOnEnemy(string &in weapon, string &in enemy, int alState)
 {	
-	RemoveTimer(weapon);
-
 	if(Distance(weapon, x[last], y[last], z[last]) > 1.0f)
 	{
 		PlaySoundAtEntity("", "MetalMediumBashFlesh.snt", weapon, 0, false);	
 		CreateParticleSystemAtEntity("BloodyHit", "blood.ps", weapon, false);
 		FadeEnemyToSmoke(enemy, false);
 	}
-	AddTimer(weapon, 0.01f, "TimerHammerPosition");
 }
