@@ -3,31 +3,31 @@ float[] x(10); float[] y(10); float[] z(10); int last;
 void OnStart()
 {
 	for(int i=0;i<10;i++) AddEntityCollideCallback("big_hammer", "enemy_"+i, "UseHammerOnEnemy", false, 1);
-	AddTimer("big_hammer", 0.00f, "TimerHammerPosition");
+	AddTimer("big_hammer", 0.00f, "TimerWeaponPosition");
 }
 
-void TimerHammerPosition(string &in asTimer)
+void TimerWeaponPosition(string &in asWeapon)
 {
-	x[last] = GetEntityPosX(asTimer);
-	y[last] = GetEntityPosY(asTimer);
-	z[last] = GetEntityPosZ(asTimer);
+	x[last] = GetEntityPosX(asWeapon);
+	y[last] = GetEntityPosY(asWeapon);
+	z[last] = GetEntityPosZ(asWeapon);
 
 	last = (last + 1) % 10;
 	
-	AddTimer(asTimer, 0.01f, "TimerHammerPosition");
+	AddTimer(asWeapon, 0.01f, "TimerWeaponPosition");
 }
 
-float Distance(string &in asEntity, float x, float y, float z)
+float Distance(string &in asWeapon, float x, float y, float z)
 {
-	return MathSqrt(MathPow(GetEntityPosX(asEntity) - x, 2) + MathPow(GetEntityPosY(asEntity) - y, 2) + MathPow(GetEntityPosZ(asEntity) - z, 2));
+	return MathSqrt(MathPow(GetEntityPosX(asWeapon) - x, 2) + MathPow(GetEntityPosY(asWeapon) - y, 2) + MathPow(GetEntityPosZ(asWeapon) - z, 2));
 }
 
-void UseHammerOnEnemy(string &in weapon, string &in enemy, int alState)
+void UseHammerOnEnemy(string &in asWeapon, string &in asEnemy, int alState)
 {	
-	if(Distance(weapon, x[last], y[last], z[last]) > 1.0f)
+	if(Distance(asWeapon, x[last], y[last], z[last]) > 1.0f)
 	{
-		PlaySoundAtEntity("", "MetalMediumBashFlesh.snt", weapon, 0, false);	
-		CreateParticleSystemAtEntity("BloodyHit", "blood.ps", weapon, false);
-		FadeEnemyToSmoke(enemy, false);
+		PlaySoundAtEntity("SoundHitEffect", "MetalMediumBashFlesh.snt", asWeapon, 0, false);	
+		CreateParticleSystemAtEntity("BloodyHit", "blood.ps", asWeapon, false);
+		FadeEnemyToSmoke(asEnemy, false);
 	}
 }
