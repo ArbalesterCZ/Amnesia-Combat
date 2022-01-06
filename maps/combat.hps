@@ -2,7 +2,7 @@ float[] x(10); float[] y(10); float[] z(10); int last;
 
 void OnStart()
 {
-	for(int i=0;i<10;i++) AddEntityCollideCallback("big_hammer", "enemy_"+i, "UseHammerOnEnemy", false, 1);
+	for(int i=0;i<10;i++) AddEntityCollideCallback("big_hammer", "enemy_"+i, "UseWeaponOnEnemy", false, 1);
 	AddTimer("big_hammer", 0.00f, "TimerWeaponPosition");
 }
 
@@ -22,7 +22,7 @@ float Distance(string &in asWeapon, float x, float y, float z)
 	return MathSqrt(MathPow(GetEntityPosX(asWeapon) - x, 2) + MathPow(GetEntityPosY(asWeapon) - y, 2) + MathPow(GetEntityPosZ(asWeapon) - z, 2));
 }
 
-void UseHammerOnEnemy(string &in asWeapon, string &in asEnemy, int alState)
+void UseWeaponOnEnemy(string &in asWeapon, string &in asEnemy, int alState)
 {	
 	if(Distance(asWeapon, x[last], y[last], z[last]) > 1.0f)
 	{
