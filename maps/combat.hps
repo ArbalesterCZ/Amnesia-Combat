@@ -13,7 +13,7 @@ void TimerWeaponPosition(string &in asWeapon)
 	z[last] = GetEntityPosZ(asWeapon);
 
 	last = (last + 1) % 10;
-	
+
 	AddTimer(asWeapon, 0.01f, "TimerWeaponPosition");
 }
 
@@ -23,10 +23,10 @@ float Distance(string &in asWeapon, float x, float y, float z)
 }
 
 void UseWeaponOnEnemy(string &in asWeapon, string &in asEnemy, int alState)
-{	
+{
 	if(Distance(asWeapon, x[last], y[last], z[last]) > 1.0f)
 	{
-		PlaySoundAtEntity("SoundHitEffect", "MetalMediumBashFlesh.snt", asWeapon, 0, false);	
+		PlaySoundAtEntity("SoundHitEffect", "MetalMediumBashFlesh.snt", asWeapon, 0, false);
 		CreateParticleSystemAtEntity("BloodyHit", "blood.ps", asWeapon, false);
 		FadeEnemyToSmoke(asEnemy, false);
 	}
