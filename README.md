@@ -3,8 +3,8 @@
 Test environment for the implementation of combat in the game [Amnesia: The Dark Descent](https://en.wikipedia.org/wiki/Amnesia:_The_Dark_Descent).  
 This feature is already used in the following mode → [The Cursed Knight](https://www.moddb.com/mods/the-cursed-knight).
 
-It is about detecting a collision between a weapon and a monster and evaluating whether the weapon has made a sufficiently strong blow.
-<p align="center"><img src="resources/images/preview.jpg" alt="combat.png"/></p>
+It is about detecting a collision between a weapon and a monster and evaluating whether the weapon has made a sufficiently strong blow.  
+![preview image](https://github.com/ArbalesterCZ/Amnesia-Combat/blob/main/resources/images/preview.jpg)
 
 ## Requirements
 Amnesia: The Dark Descent version 1.3.1
