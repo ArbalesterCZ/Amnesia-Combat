@@ -18,7 +18,7 @@
                 <File Id="0" Path="entities/ptest/enemy_suitor/enemy_suitor.ent" />
                 <File Id="1" Path="entities/enemy/servant_grunt/servant_grunt.ent" />
                 <File Id="2" Path="entities/enemy/servant_brute/servant_brute.ent" />
-                <File Id="3" Path="entities/equipment/sledge/sledge.ent" />
+                <File Id="3" Path="custom_stories/Amnesia-Combat/resources/entities/sledge.ent" />
             </FileIndex_Entities>
             <FileIndex_Decals NumOfFiles="0" />
             <StaticObjects />
