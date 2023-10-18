@@ -1,4 +1,4 @@
-float[] x(10); float[] y(10); float[] z(10); int last;
+float x; float y; float z; float velocity;
 
 void OnStart()
 {
@@ -8,23 +8,18 @@ void OnStart()
 
 void TimerWeaponPosition(string &in asWeapon)
 {
-	x[last] = GetEntityPosX(asWeapon);
-	y[last] = GetEntityPosY(asWeapon);
-	z[last] = GetEntityPosZ(asWeapon);
-
-	last = (last + 1) % 10;
-
-	AddTimer(asWeapon, 0.01f, "TimerWeaponPosition");
-}
-
-float Distance(string &in asWeapon, float x, float y, float z)
-{
-	return MathSqrt(MathPow(GetEntityPosX(asWeapon) - x, 2) + MathPow(GetEntityPosY(asWeapon) - y, 2) + MathPow(GetEntityPosZ(asWeapon) - z, 2));
+	velocity = MathSqrt(MathPow(GetEntityPosX(asWeapon) - x, 2) + MathPow(GetEntityPosY(asWeapon) - y, 2) + MathPow(GetEntityPosZ(asWeapon) - z, 2));
+	
+	x = GetEntityPosX(asWeapon);
+	y = GetEntityPosY(asWeapon);
+	z = GetEntityPosZ(asWeapon);
+	
+	AddTimer(asWeapon, 0.016667f, "TimerWeaponPosition");
 }
 
 void UseWeaponOnEnemy(string &in asWeapon, string &in asEnemy, int alState)
 {
-	if(Distance(asWeapon, x[last], y[last], z[last]) > 1.0f)
+	if(velocity > 0.22f)
 	{
 		PlaySoundAtEntity("SoundHitEffect", "MetalMediumBashFlesh.snt", asWeapon, 0, false);
 		CreateParticleSystemAtEntity("BloodyHit", "blood.ps", asWeapon, false);
